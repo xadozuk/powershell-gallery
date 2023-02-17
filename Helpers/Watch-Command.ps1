@@ -11,11 +11,12 @@ function Watch-Command
     
     while($true)
     {
+        $Output = &$ScriptBlock
+
         Clear-Host
 
         Write-Host "$(Get-Date -format "dd/MM/yyyy HH:mm:ss")`nEvery $($Wait)s"
-
-        &$ScriptBlock
+        $Output | Write-Host
 
         Start-Sleep -Seconds $Wait
     }
