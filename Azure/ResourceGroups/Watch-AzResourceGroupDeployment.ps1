@@ -31,8 +31,8 @@ function Watch-AzResourceGroupDeployment
                 @{n="State";e={ $_.provisioningState }},
                 @{n="ResourceType";e={ $_.targetResource.resourceType }},
                 @{n="ResourceName";e={ $_.targetResource.resourceName }} `
-                | Format-Table
-                | Out-String
+                | Format-Table `
+                | Out-String `
                 | Write-Output
         }        
     }
