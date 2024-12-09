@@ -11,6 +11,6 @@ function Test-NotLike
 
     process
     {
-        $InputObject | Test-Like -In $In
+        $InputObject | Test-Like -In $In | ForEach-Object { -not $_ }
     }
 }
