@@ -1,4 +1,4 @@
-function Invoke-FuzzyZoxide
+function Invoke-FzfZoxide
 {
     $ZoxideInstalled = $null -ne (Get-Command -Name zoxide -ErrorAction SilentlyContinue)
 
